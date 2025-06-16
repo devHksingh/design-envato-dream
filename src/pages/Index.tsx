@@ -1,8 +1,14 @@
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
-import Stats from '../components/Stats';
+import Announcements from '../components/Announcements';
+import WhyChooseUs from '../components/WhyChooseUs';
+import FeaturedCourses from '../components/FeaturedCourses';
+import Activities from '../components/Activities';
+import Gallery from '../components/Gallery';
+import Testimonials from '../components/Testimonials';
+import LatestNews from '../components/LatestNews';
+import ContactCTA from '../components/ContactCTA';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -10,8 +16,14 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
-      <Stats />
+      <Announcements />
+      <WhyChooseUs />
+      <FeaturedCourses />
+      <Activities />
+      <Gallery />
+      <Testimonials />
+      <LatestNews />
+      <ContactCTA />
       <Footer />
     </div>
   );

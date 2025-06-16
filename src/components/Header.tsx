@@ -14,33 +14,38 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">Nexus</h1>
+          <div className="flex-shrink-0 flex items-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mr-2"></div>
+            <h1 className="text-2xl font-bold text-purple-800">Rainbow</h1>
+            <span className="text-sm text-gray-600 ml-1">kids learning</span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              Home
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">
+              HOME
             </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              About
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">
+              ABOUT US
             </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              Services
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">
+              PAGES
             </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              Portfolio
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">
+              PROGRAMS
             </a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              Contact
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">
+              GALLERY
+            </a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">
+              CONTACT
             </a>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-              Get Started
+            <button className="bg-yellow-400 text-purple-800 px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition-colors">
+              REGISTER
             </button>
           </div>
 
@@ -48,7 +53,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-700 hover:text-purple-600 p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -59,23 +64,26 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="space-y-2">
-              <a href="#" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                Home
+              <a href="#" className="block text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">
+                HOME
               </a>
-              <a href="#" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                About
+              <a href="#" className="block text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">
+                ABOUT US
               </a>
-              <a href="#" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                Services
+              <a href="#" className="block text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">
+                PAGES
               </a>
-              <a href="#" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                Portfolio
+              <a href="#" className="block text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">
+                PROGRAMS
               </a>
-              <a href="#" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                Contact
+              <a href="#" className="block text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">
+                GALLERY
               </a>
-              <button className="w-full mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                Get Started
+              <a href="#" className="block text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">
+                CONTACT
+              </a>
+              <button className="w-full mt-4 bg-yellow-400 text-purple-800 px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition-colors">
+                REGISTER
               </button>
             </div>
           </div>
