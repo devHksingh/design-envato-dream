@@ -5,25 +5,25 @@ const courses = [
 		title: "Kids Activity Clubs",
 		age: "",
 		color: "bg-pink-400",
-		icon: "/images/icons_img/icon1.svg",
+		icon: "/images/icons_img/icon6.svg",
 	},
 	{
 		title: "Elementary School",
 		age: "",
 		color: "bg-pink-400",
-		icon: "/images/icons_img/icon2.svg",
+		icon: "/images/icons_img/icon7.svg",
 	},
 	{
 		title: "Middle (10-16) Years",
 		age: "",
 		color: "bg-blue-400",
-		icon: "/images/icons_img/icon3.svg",
+		icon: "/images/icons_img/icon8.svg",
 	},
 	{
 		title: "Kids' Parties",
 		age: "",
 		color: "bg-blue-400",
-		icon: "/images/icons_img/icon4.svg",
+		icon: "/images/icons_img/icon9.svg",
 	},
 ];
 

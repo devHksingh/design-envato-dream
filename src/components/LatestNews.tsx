@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -7,81 +6,114 @@ const LatestNews = () => {
     {
       title: "Make learning fun for your kids",
       date: "June 10, 2017",
-      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      title: "Make learning fun for your kids",
-      date: "June 10, 2017", 
-      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+      image: "/images/gallery/img2.jpg"
     },
     {
       title: "Make learning fun for your kids",
       date: "June 10, 2017",
-      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+      image: "/images/gallery/img3.jpg"
+    },
+    {
+      title: "Make learning fun for your kids",
+      date: "June 10, 2017",
+      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+      image: "/images/gallery/img4.jpg"
+    },
+    {
+      title: "Make learning fun for your kids",
+      date: "June 10, 2017",
+      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+      image: "/images/gallery/img2.jpg"
+    },
+    {
+      title: "Make learning fun for your kids",
+      date: "June 10, 2017",
+      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+      image: "/images/gallery/img3.jpg"
+    },
+    {
+      title: "Make learning fun for your kids",
+      date: "June 10, 2017",
+      excerpt: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+      image: "/images/gallery/img4.jpg"
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-50 relative overflow-hidden">
-      {/* Decorative cloud element */}
-      <div className="absolute bottom-0 left-0 w-32 h-20 opacity-20">
-        <svg viewBox="0 0 100 50" className="w-full h-full fill-blue-300">
-          <ellipse cx="25" cy="35" rx="20" ry="12"/>
-          <ellipse cx="45" cy="30" rx="25" ry="15"/>
-          <ellipse cx="65" cy="35" rx="20" ry="12"/>
-        </svg>
-      </div>
-
+    <section className="py-16 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Latest News</h2>
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">Latest News</h2>
         </div>
-
         <div className="relative">
           <Carousel className="w-full">
-            <CarouselContent className="-ml-4">
+            <CarouselPrevious className="!absolute !left-0 !top-1/2 -translate-y-1/2 !z-10 !bg-pink-300 !w-10 !h-10 md:!w-12 md:!h-12 !rounded-full !flex !items-center !justify-center !shadow-lg hover:!bg-pink-400 transition-colors">
+              <ArrowLeft size={24} className="text-white" />
+            </CarouselPrevious>
+            <CarouselNext className="!absolute !right-0 !top-1/2 -translate-y-1/2 !z-10 !bg-gray-300 !w-10 !h-10 md:!w-12 md:!h-12 !rounded-full !flex !items-center !justify-center !shadow-lg hover:!bg-gray-400 transition-colors">
+              <ArrowRight size={24} className="text-white" />
+            </CarouselNext>
+            <CarouselContent className="-ml-4 ">
               {newsItems.map((item, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2">
-                  <div className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
-                    <div className="relative">
-                      <img 
-                        src={item.image} 
+                <CarouselItem
+                  key={index}
+                  className="
+                    pl-4
+                    w-full
+                    sm:w-3/4
+                    md:basis-full
+                    lg:basis-1/2
+                    flex
+                    justify-center
+                    gap-20
+                  "
+                >
+                  <div className="
+                    flex flex-col
+                    md:flex-row
+                    items-center
+                    md:items-start
+                    gap-6
+                    md:gap-10
+                    bg-transparent
+                    w-full
+                    max-w-xl
+                  ">
+                    <div className="flex-shrink-0 mb-4 md:mb-0">
+                      <img
+                        src={item.image}
                         alt={item.title}
-                        className="w-full h-64 object-cover"
+                        className="
+                          w-48 h-48
+                          sm:w-56 sm:h-56
+                          object-cover
+                          rounded-[40px_10px_40px_10px/40px_10px_40px_10px]
+                          shadow-lg
+                        "
                       />
-                      <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-md">
-                        <div className="flex items-center space-x-2 text-blue-600">
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                          </svg>
-                          <span className="text-sm font-medium">{item.date}</span>
-                        </div>
-                      </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
-                      <p className="text-gray-600 mb-4 leading-relaxed">{item.excerpt}</p>
-                      <button className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                    <div className="flex-1 flex flex-col items-start">
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                      <div className="flex items-center space-x-2 text-blue-600 mb-2">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-xs sm:text-sm font-medium">{item.date}</span>
+                      </div>
+                      <p className="text-gray-600 mb-3 leading-relaxed text-xs sm:text-sm">{item.excerpt}</p>
+                      <a href="#" className="text-black font-semibold underline underline-offset-2 hover:text-purple-700 transition-colors text-xs sm:text-sm">
                         Read More
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute -left-6 top-1/2 -translate-y-1/2 bg-pink-500 hover:bg-pink-600 border-pink-500 text-white w-12 h-12" />
-            <CarouselNext className="absolute -right-6 top-1/2 -translate-y-1/2 bg-gray-400 hover:bg-gray-500 border-gray-400 text-white w-12 h-12" />
           </Carousel>
         </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-purple-600 text-white px-12 py-4 rounded-full font-bold hover:bg-purple-700 transition-colors text-lg">
-            View All
-          </button>
-        </div>
+        
       </div>
     </section>
   );
