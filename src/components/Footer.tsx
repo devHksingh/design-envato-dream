@@ -1,4 +1,3 @@
-
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Globe } from 'lucide-react';
 
 const Footer = () => {
@@ -22,14 +21,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 text-white py-12 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-32 h-32 bg-orange-400 opacity-20 rounded-full -translate-x-16 -translate-y-16"></div>
-      <div className="absolute bottom-0 right-0 w-48 h-48 bg-yellow-400 opacity-10 rounded-full translate-x-24 translate-y-24"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Navigation Links */}
-        <div className="flex flex-wrap justify-center gap-8 mb-8">
+    <footer className="bg-[#2d2156] text-white py-8 mt-10">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12">
           {navigationLinks.map((link, index) => (
             <a 
               key={index} 
@@ -40,10 +34,8 @@ const Footer = () => {
             </a>
           ))}
         </div>
-
-        {/* Social Media Section */}
-        <div className="text-center mb-8">
-          <p className="text-white mb-6 text-lg">Follow Us:</p>
+        <div className="mt-6 md:mt-0">
+          <span>Follow us:</span>
           <div className="flex justify-center space-x-4">
             {socialIcons.map((social, index) => {
               const IconComponent = social.icon;
@@ -59,11 +51,9 @@ const Footer = () => {
             })}
           </div>
         </div>
-
-        {/* Copyright */}
-        <div className="text-center border-t border-purple-700 pt-8">
-          <p className="text-gray-300 text-sm">&copy; 2024 Rainbow Kids Learning. All rights reserved.</p>
-        </div>
+      </div>
+      <div className="text-center text-xs mt-4 opacity-70">
+        © {new Date().getFullYear()} Rainbow Play School. All rights reserved.
       </div>
     </footer>
   );

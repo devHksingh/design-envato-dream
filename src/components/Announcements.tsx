@@ -1,53 +1,95 @@
+import { useState } from "react";
+import UiButton from "@/components/ui/UiButton";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const announcements = [
+	{
+		text: "Appropriately engage diverse resources for next-generation systems. Professionally foster extensive paradigms vis-a-vis multidisciplinary systems. Synergistically deploy maintainable products and frictionless methodologies.",
+	},
+	{
+		text: "Empower innovative solutions for modern education. Seamlessly integrate technology and creativity for holistic child development.",
+	},
+	{
+		text: "Foster a nurturing environment for learning and growth. Encourage curiosity and collaboration among students.",
+	},
+];
 
 const Announcements = () => {
-  return (
-    <section className="py-16 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Announcement Content */}
-          <div>
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center mr-4">
-                <span className="text-white font-bold">📢</span>
-              </div>
-              <h2 className="text-3xl font-bold text-purple-800">Announcement</h2>
-            </div>
-            
-            <div className="bg-gray-50 rounded-2xl p-6 mb-6">
-              <p className="text-gray-700 leading-relaxed">
-                We are excited to announce that registrations for the new academic year 2020-2021 are now open! 
-                Join our vibrant learning community where children discover, explore, and grow through innovative 
-                educational programs designed to nurture young minds.
-              </p>
-            </div>
+	const [current, setCurrent] = useState(0);
 
-            <div className="flex space-x-4">
-              <div className="w-4 h-4 bg-pink-400 rounded-full"></div>
-              <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-            </div>
-            
-            <button className="mt-6 bg-purple-600 text-white px-6 py-3 rounded-full font-bold hover:bg-purple-700 transition-colors">
-              Read More
-            </button>
-          </div>
+	const prev = () =>
+		setCurrent((prev) => (prev === 0 ? announcements.length - 1 : prev - 1));
+	const next = () =>
+		setCurrent((prev) =>
+			prev === announcements.length - 1 ? 0 : prev + 1
+		);
 
-          {/* Right - Illustration */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                alt="Child with laptop" 
-                className="w-80 h-80 object-cover rounded-2xl shadow-lg"
-              />
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-yellow-400 rounded-full"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-pink-400 rounded-full"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+	return (
+		<section className="py-20 bg-white relative">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+					{/* Left - Title and Navigation */}
+					<div>
+						<h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+							Announcement
+						</h2>
+						<div className="flex items-center gap-3 mb-6">
+							<button
+								className="w-11 h-11 rounded-full bg-pink-300 flex items-center justify-center text-white text-xl shadow hover:scale-105 transition"
+								onClick={prev}
+								aria-label="Previous"
+							>
+								<ChevronLeft size={28} />
+							</button>
+							<button
+								className="w-11 h-11 rounded-full bg-gray-300 flex items-center justify-center text-gray-700 text-xl shadow hover:scale-105 transition"
+								onClick={next}
+								aria-label="Next"
+							>
+								<ChevronRight size={28} />
+							</button>
+						</div>
+						{/* Dots */}
+						<div className="flex gap-2 mt-2 ml-2">
+							{announcements.map((_, idx) => (
+								<span
+									key={idx}
+									className={`w-3 h-3 rounded-full transition ${
+										idx === current ? "bg-pink-400" : "bg-gray-300"
+									}`}
+								/>
+							))}
+						</div>
+					</div>
+					{/* Right - Announcement Content */}
+					<div className="flex flex-col">
+						<p className="text-gray-500 mb-8 leading-relaxed text-lg md:text-md font-medium">
+							{announcements[current].text}
+						</p>
+						<UiButton
+							color="#3d246c"
+							textColor="#fff"
+							borderColor="#3d246c"
+							style={{
+								borderRadius: "20px 30px 20px 20px",
+								fontSize: "1rem",
+								fontWeight: 400,
+								width: "fit-content", // Change from 100% to fit-content
+								minWidth: 120,
+								boxShadow: "2px 6px 0px 0px #e5e5e5",
+								alignSelf: "flex-start", // Prevent full width in flex
+                padding: "8px 30px" 
+							}}
+						>
+							View All
+						</UiButton>
+					</div>
+				</div>
+				{/* Decorative dot */}
+				<span className="absolute right-8 bottom-8 w-2 h-2 rounded-full bg-pink-400"></span>
+			</div>
+		</section>
+	);
 };
 
 export default Announcements;
