@@ -2,7 +2,7 @@ import UiButton from "@/components/ui/UiButton";
 
 const EnrollCTA = () => (
   <section
-    className="relative py-4 bg-[#9be89b]  overflow-hidden"
+    className="relative py-4 bg-[#9be89b]  overflow-hidden "
     style={{
       borderTopLeftRadius: "0 0",
       borderTopRightRadius: "0 0",
@@ -26,11 +26,11 @@ const EnrollCTA = () => (
               minWidth: 170,
               boxShadow: "0 6px 0px 0px #7e6fcf",
             }}
-            className="font-normal px-10 py-3 w-full md:w-[20%]"
+            className="font-normal px-10 py-3 w-full md:w-[30%]"
           >
             Enroll Your Child
           </UiButton>
-          <div className="flex items-center gap-3 text-lg font-semibold text-gray-800 mt-0 md:mt-0 pt-4">
+          <div className="flex items-center gap-3 text-lg font-semibold text-gray-800 mt-0 md:mt-0 pt-4 pb-5 md:pb-2">
             <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
               <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13A2.5 2.5 0 0 1 19.5 21h-15A2.5 2.5 0 0 1 2 18.5v-13Z" stroke="#43268c" strokeWidth="2" />
               <path d="M6 8h12M6 12h8" stroke="#43268c" strokeWidth="2" strokeLinecap="round" />
