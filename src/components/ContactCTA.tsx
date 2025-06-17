@@ -1,9 +1,4 @@
-
 import { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const ContactCTA = () => {
   const [formData, setFormData] = useState({
@@ -19,100 +14,96 @@ const ContactCTA = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    // Handle form submission
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 w-12 h-12 bg-pink-400 rounded-full opacity-80"></div>
-      <div className="absolute top-20 left-32 w-16 h-16 bg-green-400 rounded-full opacity-60"></div>
-      <div className="absolute top-32 left-20 w-8 h-8 bg-blue-400 rounded-full opacity-70"></div>
-      <div className="absolute top-10 right-20 w-20 h-20 bg-orange-400 rounded-full opacity-50"></div>
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-yellow-400 rounded-full opacity-60"></div>
+    <section className="py-0 bg-white relative overflow-hidden pt-16">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ">
+        <div className="flex flex-col lg:flex-row  gap-0 items-center">
           {/* Left - Child with Megaphone */}
-          <div className="flex justify-center lg:justify-start">
-            <img 
-              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-              alt="Child with megaphone" 
-              className="w-96 h-96 object-cover"
+          <div className="flex-1 flex items-center  justify-center lg:justify-start">
+            <img
+              src="/images/gallery/img14.jpg"
+              alt="Child with megaphone"
+              className="w-[500px] h-[420px] object-contain mt-12 rounded-lg"
             />
           </div>
-
-          {/* Right - Contact Form in Orange Circle */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full p-12 shadow-2xl">
-              <h2 className="text-4xl font-bold text-purple-900 mb-8 text-center">Ask About Kids Acts</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Right - Contact Form in Gradient Oval */}
+          <div className="flex-1 flex justify-center items-center relative">
+            <div
+              className="w-full max-w-xl bg-gradient-to-br from-[#ffe259] via-[#ffa751] to-[#ff6a00] rounded-[5%/10%] px-10 py-14 shadow-2xl flex flex-col items-center"
+              style={{
+                minHeight: 480,
+                boxShadow: "0 10px 40px 0 rgba(0,0,0,0.10)",
+              }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-[#43268c] mb-10 text-center">
+                Ask About Kids Acts
+              </h2>
+              <form onSubmit={handleSubmit} className="w-full flex flex-col gap-8">
                 <div>
-                  <Label htmlFor="name" className="text-purple-900 font-semibold">Your Name</Label>
-                  <Input
-                    id="name"
+                  <label className="block text-base text-[#43268c] mb-2">Your Name</label>
+                  <input
                     type="text"
                     value={formData.name}
-                    onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="mt-2 bg-white border-none placeholder-gray-500"
+                    onChange={e => handleInputChange('name', e.target.value)}
+                    className="w-full bg-transparent border-0 border-b border-dotted border-[#43268c] text-[#43268c] placeholder-[#43268c]/60 focus:ring-0 focus:border-[#2d1a6c] py-2 outline-none focus:outline-none"
                     placeholder="Enter your name"
                   />
                 </div>
-
                 <div>
-                  <Label htmlFor="email" className="text-purple-900 font-semibold">Email Address</Label>
-                  <Input
-                    id="email"
+                  <label className="block text-base text-[#43268c] mb-2">Email Address</label>
+                  <input
                     type="email"
                     value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="mt-2 bg-white border-none placeholder-gray-500"
+                    onChange={e => handleInputChange('email', e.target.value)}
+                    className="w-full bg-transparent border-0 border-b border-dotted border-[#43268c] text-[#43268c] placeholder-[#43268c]/60 focus:ring-0 focus:border-[#2d1a6c] py-2 outline-none focus:outline-none"
                     placeholder="Enter your email"
                   />
                 </div>
-
                 <div>
-                  <Label htmlFor="phone" className="text-purple-900 font-semibold">Phone Number</Label>
-                  <Input
-                    id="phone"
+                  <label className="block text-base text-[#43268c] mb-2">Phone Number</label>
+                  <input
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="mt-2 bg-white border-none placeholder-gray-500"
-                    placeholder="Enter your phone number"
+                    onChange={e => handleInputChange('phone', e.target.value)}
+                    className="w-full bg-transparent border-0 border-b border-dotted border-[#43268c] text-[#43268c] placeholder-[#43268c]/60 focus:ring-0 focus:border-[#2d1a6c] py-2 outline-none focus:outline-none"
+                    placeholder="Enter your phone"
                   />
                 </div>
-
                 <div>
-                  <Label htmlFor="class" className="text-purple-900 font-semibold">Studying Class</Label>
-                  <Select onValueChange={(value) => handleInputChange('studyingClass', value)}>
-                    <SelectTrigger className="mt-2 bg-white border-none">
-                      <SelectValue placeholder="Select class" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="preschool">Preschool</SelectItem>
-                      <SelectItem value="kindergarten">Kindergarten</SelectItem>
-                      <SelectItem value="grade1">Grade 1</SelectItem>
-                      <SelectItem value="grade2">Grade 2</SelectItem>
-                      <SelectItem value="grade3">Grade 3</SelectItem>
-                      <SelectItem value="grade4">Grade 4</SelectItem>
-                      <SelectItem value="grade5">Grade 5</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <label className="block text-base text-[#43268c] mb-2">Studying Class</label>
+                  <select
+                    value={formData.studyingClass}
+                    onChange={e => handleInputChange('studyingClass', e.target.value)}
+                    className="w-full bg-transparent border-0 border-b border-dotted border-[#43268c] text-[#43268c] focus:ring-0 focus:border-[#2d1a6c] py-2 outline-none focus:outline-none"
+                  >
+                    <option value="" disabled>Select class</option>
+                    <option value="preschool">Preschool</option>
+                    <option value="kindergarten">Kindergarten</option>
+                    <option value="grade1">Grade 1</option>
+                    <option value="grade2">Grade 2</option>
+                    <option value="grade3">Grade 3</option>
+                    <option value="grade4">Grade 4</option>
+                    <option value="grade5">Grade 5</option>
+                  </select>
                 </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full bg-purple-800 hover:bg-purple-900 text-white font-bold py-3 rounded-full mt-6"
-                >
-                  View All
-                </Button>
+                <div className="flex justify-end mt-2">
+                  <button
+                    type="submit"
+                    className="bg-[#43268c] text-white px-10 py-3 rounded-[20px_30px_20px_20px] font-semibold shadow-md hover:bg-[#2d1a6c] transition-colors text-base"
+                  >
+                    submit
+                  </button>
+                </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+   
     </section>
   );
 };

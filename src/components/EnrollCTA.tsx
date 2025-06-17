@@ -2,7 +2,7 @@ import UiButton from "@/components/ui/UiButton";
 
 const EnrollCTA = () => (
   <section
-    className="relative py-16 bg-[#9be89b]  "
+    className="relative py-4 bg-[#9be89b]  overflow-hidden"
     style={{
       borderTopLeftRadius: "0 0",
       borderTopRightRadius: "0 0",
@@ -41,18 +41,15 @@ const EnrollCTA = () => (
         </div>
       </div>
       {/* Kid on stool image */}
-      <div className="hidden md:block self-end w-[240px] h-[300px] absolute bottom-[75px] right-[120px]">
+      <div className="hidden md:block self-end w-[340px] h-[400px]">
         <img
           src="/images/gallery/img23.jpg"
           alt="Kid on stool"
-          className=" object-contain "
+          className="relative object-contain bottom-[135px]"
         />
       </div>
     </div>
-    {/* Decorative element (optional) */}
-    {/* <div className="absolute left-0 bottom-0 w-full h-12">
-      <img src="/images/cta/decor-wave.svg" alt="" className="w-full h-full object-cover" />
-    </div> */}
+
   </section>
 );
 
