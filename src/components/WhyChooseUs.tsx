@@ -38,7 +38,7 @@ const WhyChooseUs = () => (
 						{features.map((feature, idx) => (
 							<div key={idx} className="flex items-center gap-4">
 								<div
-									className={`${feature.color} w-14 h-14 rounded-full flex items-center justify-center shadow-md`}
+									className={`${feature.color}   flex items-center justify-center shadow-md p-2  scale-1 rounded-full`}
 								>
 									<img
 										src={feature.iconPath}

@@ -54,7 +54,8 @@ const FeaturedCourses = () => {
 							{courses.map((course, index) => (
 								<div key={index} className="flex items-center gap-4">
 									<div
-										className={`${course.color} w-16 h-16 rounded-full flex items-center justify-center shadow-md`}
+										// className={`${course.color} w-16 h-16 rounded-full flex items-center justify-center shadow-md`}
+										className={`${course.color}   flex items-center justify-center shadow-md p-2  scale-1 rounded-full`}
 									>
 										<img
 											src={course.icon}
