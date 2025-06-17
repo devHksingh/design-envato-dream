@@ -21,12 +21,12 @@ const EnrollCTA = () => (
             borderColor="#43268c"
             style={{
               borderRadius: "16px 32px 16px 16px",
-              fontSize: "1rem",
+              fontSize: "1.2rem",
               fontWeight: 400,
               minWidth: 170,
               boxShadow: "0 6px 0px 0px #7e6fcf",
             }}
-            className="font-normal px-10 py-3"
+            className="font-normal px-10 py-3 w-full md:w-[20%]"
           >
             Enroll Your Child
           </UiButton>
@@ -49,7 +49,7 @@ const EnrollCTA = () => (
         />
       </div>
     </div>
-  
+
   </section>
 );
 

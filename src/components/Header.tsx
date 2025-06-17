@@ -26,8 +26,8 @@ const Header = () => {
         </div>
 
         {/* Navigation and Button */}
-        <div className="hidden md:flex items-center gap-8 ml-auto">
-          <nav className="flex gap-8">
+        <div className="hidden md:flex items-center gap-8 ml-auto ">
+          <nav className="flex gap-8 p-1">
             <a href="#" className="text-white text-sm font-normal hover:opacity-80 transition">Home</a>
             <a href="#" className="text-white text-sm font-normal hover:opacity-80 transition">Administration</a>
             <a href="#" className="text-white text-sm font-normal hover:opacity-80 transition">Faculty</a>
@@ -77,7 +77,7 @@ const Header = () => {
             background: "linear-gradient(90deg, #8e24aa 0%, #d500f9 100%)"
           }}
         >
-          <nav className="flex flex-col gap-4 mt-2">
+          <nav className="flex flex-col gap-4 mt-2 p-1 pt-2 ">
             <a href="#" className="text-white text-base font-normal">Home</a>
             <a href="#" className="text-white text-base font-normal">Administration</a>
             <a href="#" className="text-white text-base font-normal">Faculty</a>
@@ -85,11 +85,12 @@ const Header = () => {
             <a href="#" className="text-white text-base font-normal">Photo Gallery</a>
             <a href="#" className="text-white text-base font-normal">Bookmarks</a>
             <a href="#" className="text-white text-base font-normal">Calendar</a>
-            <UiButton
+            <UiButton 
               color="rgb(230 175 46)"
               textColor="#fff"
-              borderColor="rgb(230 175 46)"
-              style={{ fontSize: "1.5rem", padding: "18px 40px" }}
+              // borderColor="rgb(230 175 46)"
+              style={{ fontSize: "1.5rem", padding: "12px 30px"}}
+              className=' outline-none border-none '
             >
               Enroll Now
             </UiButton>

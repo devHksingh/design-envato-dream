@@ -49,12 +49,13 @@ const HeroSection = () => (
           color="rgb(0 182 170)"
           textColor="#fff"
           borderColor="rgb(0 182 170)"
-          style={{
-            fontSize: "1.25rem",
-            padding: "14px 48px",
-            marginTop: "10px",
-            fontWeight: 400
-          }}
+          // style={{
+          //   fontSize: "1.25rem",
+          //   padding: "14px 48px",
+          //   marginTop: "10px",
+          //   fontWeight: 400
+          // }}
+          className='text-[1.25rem] px-[0.875rem] py-[1.1rem] w-full md:w-[44%] font-medium mt-4 mb-2 text-xl'
         >
           Enroll Now
         </UiButton>
