@@ -61,7 +61,7 @@ const HeroSection = () => (
         </UiButton>
       </div>
       <div className="relative mt-10 md:mt-0">
-        <img src="images/bg_img/bg2.png" alt="" className="w-[500px] h-[350px] rounded-xl shadow-xl opacity-75" />
+        <img src="images/bg_img/bg2.png" alt="" className="w-[31.25rem] lg:w-[40rem] h-[350px] rounded-xl shadow-xl opacity-75" />
       </div>
     </div>
     
